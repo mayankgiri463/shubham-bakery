@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Attendees</title>
+
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='shubham-style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='attendees-style.css')}}">
+
+</head>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+    <!-- MENU BAR -->
+    <nav id="nav-bar">     
+        <ul>
+            <li><a class="active" href="/">Home</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/attendees">Attendees</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+
+
+
+
+<div class="list-of-users">
+    <h1 style="margin-left: 5%; margin-bottom: 5px;">
+        Registered Users
+    </h1>
+ 
+
+    <div class="container">
+        <table > 
+            <thead class="table-header">
+                <tr class="table-row">
+                    <th class="table-data">S No.</th>
+                    <th class="table-data">Email</th>
+                    <th class="table-data">First Name</th>
+                    <th class="table-data">Last Name</th>
+                </tr>
+            </thead>
+            <tbody class="table-content">
+                {% for attendee in attendees %}
+                    <tr class="table-row">
+                        <th class="table-data" scope="row">{{loop.index}}</th>
+                        <td class="table-data">{{attendee.email}}</td>
+                        <td class="table-data">{{attendee.firstname}}</td>
+                        <td class="table-data">{{attendee.lastname}}</td>
+                    </tr>
+                {% endfor %}
+                
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+
+
+    
+
+     <!-- SCRIPTS -->
+     <!-- <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/aos.js"></script>
+     <script src="js/smoothscroll.js"></script> -->
+     <script src="js/custom.js"></script>
+
+</body>
+</html>

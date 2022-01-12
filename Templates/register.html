@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Register</title>
+
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='shubham-style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='register-style.css')}}">
+
+</head>
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+    <!-- MENU BAR -->
+    <nav id="nav-bar">     
+        <ul>
+            <li><a class="active" href="/">Home</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/attendees">Attendees</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+    <div class="user">
+       
+        {% if find %}
+            <p class="registered-prompt">User email already registered.!</p>
+        {% endif %}
+        
+        
+        {% if find2 %}
+            <p class="registered-prompt">User successfully registered.!</p>
+        {% endif %}
+        <form class="form" action="/register" method='POST'>
+            <div class="form__group">
+                <input type="text" placeholder="First Name" class="form__input" name="firstname" />
+            </div>
+            
+            <div class="form__group">
+                <input type="text" placeholder="Last Name" class="form__input" name="lastname"/>
+            </div>
+            
+            <div class="form__group">
+                <input type="email" placeholder="Email" class="form__input" name="email"/>
+            </div>
+            
+            <button  class="button_slide slide_right bottom-page-button" type="submit">Submit</button>
+        </form>
+
+    </div>
+
+
+
+
+
+
+
+
+    
+
+     <!-- SCRIPTS -->
+     <!-- <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/aos.js"></script>
+     <script src="js/smoothscroll.js"></script> -->
+     <script src="js/custom.js"></script>
+
+</body>
+</html>

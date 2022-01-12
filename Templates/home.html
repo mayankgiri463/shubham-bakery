@@ -4,24 +4,51 @@
 
      <title>Shubham Bakers</title>
 
+
      <!-- MAIN CSS -->
-     <link rel="stylesheet" href="css/shubham-style.css">
+     <link rel="stylesheet" href="{{url_for('static', filename='shubham-style.css')}}">
 
 </head>
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
 
+    
+    <img style="margin-top: 65px; margin-right: 10px; border-radius: 50%;" src="static/cake-top-view2.jpg" align="right" width="350" height="350">
     <!-- MENU BAR -->
     <nav id="nav-bar">     
         <ul>
-            <li><a class="active" href="/home.html">Home</a></li>
-            <li><a href="/registration.html">Register</a></li>
-            <li><a href="/attendees.html">Attendees</a></li>
-            <li><a href="/about.html">About</a></li>
+            <li><a class="active" href="/">Home</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/attendees">Attendees</a></li>
+            <li><a href="/about">About</a></li>
         </ul>
     </nav>
 
 
 
+
+    <!-- cake-making -->
+    <section class="" id="home">
+    <div>
+        <div class="header-block">
+            <div id="subtext-heading">
+                Learn and eat with Shubham.!
+            </div>
+            <div id="text-heading">
+                <h1>5 Day baking workshop</h1>
+            </div>
+        </div>
+    </div>
+    <div class="buttons-home-page">
+
+
+        <a href="/register" class="button_slide slide_right">Get Started</a>
+        <a href="/about" class="button_slide slide_right">Learn More</a>
+        
+        
+    </div>
+    <!-- <img id="main-image" src="/images/bakery-image.jpg" alt="Italian Trulli"> -->
+
+    </section>
 
     <div class="container">
         <div >
@@ -60,14 +87,12 @@
                 </h2><p>&nbsp;</p>
                 <p>&nbsp;</p>
                 
-                <a href="/registration.html" class="button_slide slide_right bottom-page-button">Get Started</a>
+                <a href="/register" class="button_slide slide_right bottom-page-button">Get Started</a>
             </div>
             
         </div>
     </div>
-
-
-    
+ 
 
      <!-- SCRIPTS -->
      <!-- <script src="js/jquery.min.js"></script>
